@@ -1,83 +1,633 @@
 <div class="row">
     <div class="col-5 col-sm-3">
-        <p>1_文字列</p>
+        <p>点検者</p>
     </div>
     <div class="col-7 col-sm-9">
-        <p>{{  item.sample_1|default_if_none:"未入力"  }}</p>
+        <p>{{  item.sample_1|default_if_none:"" }}</p>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>日時</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{ item.sample_7|date:"Y/m/d" }}</p>
     </div>
 </div>
 <div class="row">
     <div class="col-5 col-sm-3">
-        <p>2_メモ</p>
+        <p>天気</p>
     </div>
     <div class="col-7 col-sm-9">
-        <p>{{  item.sample_2|default_if_none:"未入力" }}</p>
+        <p>{{ item.get_sample_9_display|default_if_none:"" }}</p>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>淡水取水ポンプ1　電流（A)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_1_1_1|default_if_none:"" }}</p>
     </div>
 </div>
 <div class="row">
     <div class="col-5 col-sm-3">
-        <p>3_整数</p>
+        <p>淡水取水ポンプ1　稼働時間（hr)</p>
     </div>
     <div class="col-7 col-sm-9">
-        <p>{{  item.sample_3|default_if_none:"未入力" }}</p>
+        <p>{{  item.sample_1_1_2|default_if_none:"" }}</p>
     </div>
 </div>
 <div class="row">
     <div class="col-5 col-sm-3">
-        <p>4_浮動小数点</p>
+        <p>淡水取水ポンプ1　異常の有無</p>
     </div>
     <div class="col-7 col-sm-9">
-        <p>{{  item.sample_4|default_if_none:"未入力" }}</p>
+        <p>{{  item.get_sample_1_1_3_display|default_if_none:"" }}</p>
     </div>
 </div>
 <div class="row">
     <div class="col-5 col-sm-3">
-        <p>5_固定小数点</p>
+        <p>淡水取水ポンプ2　電流（A)</p>
     </div>
     <div class="col-7 col-sm-9">
-        <p>{{  item.sample_5|default_if_none:"未入力" }}</p>
+        <p>{{  item.sample_1_2_1|default_if_none:"" }}</p>
     </div>
 </div>
 <div class="row">
     <div class="col-5 col-sm-3">
-        <p>6_ブール値</p>
+        <p>淡水取水ポンプ2　稼働時間（hr)</p>
     </div>
     <div class="col-7 col-sm-9">
-        <p>{{ item.sample_6|yesno:"はい,いいえ" }}</p>
+        <p>{{  item.sample_1_2_2|default_if_none:"" }}</p>
     </div>
 </div>
 <div class="row">
     <div class="col-5 col-sm-3">
-        <p>7_日付</p>
+        <p>淡水取水ポンプ2　異常の有無</p>
     </div>
     <div class="col-7 col-sm-9">
-        <p>{{ item.sample_7|date:"Y年m月d日" }}</p>
+        <p>{{  item.get_sample_1_2_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>冷蔵庫　庫内温度（℃)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_2_1_1|default_if_none:"" }}</p>
     </div>
 </div>
 <div class="row">
     <div class="col-5 col-sm-3">
-        <p>8_日時</p>
+        <p>冷蔵庫　異常の有無</p>
     </div>
-    <div class="col-7 col-sm-9">
-        <p>{{ item.sample_8|date:"Y年m月d日 G時i分s秒" }}</p>
-    </div>
-</div>
-<div class="row">
-    <div class="col-5 col-sm-3">
-        <p>9_選択肢（固定）</p>
-    </div>
-    <div class="col-7 col-sm-9">
-        <p>{{ item.get_sample_9_display|default_if_none:"未入力" }}</p>
+    <div class="col-7 col-sm-9"> 
+        <p>{{  item.get_sample_2_1_2_display|default_if_none:"" }}</p>
     </div>
 </div>
 <div class="row">
     <div class="col-5 col-sm-3">
-        <p>10_選択肢（マスタ連動）</p>
+        <p>冷凍庫　庫内温度（℃)</p>
     </div>
     <div class="col-7 col-sm-9">
-        <p>{{ item.sample_10.get_full_name|default_if_none:"未入力" }}</p>
+        <p>{{  item.sample_2_2_1|default_if_none:"" }}</p>
     </div>
 </div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>冷凍庫　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_2_2_2_display|default_if_none:"" }}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水受水槽　水位（cm)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_3_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>淡水受水槽　水位（cm)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_3_2|default_if_none:"" }}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水揚水ポンプ1　電流（A)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_4_1_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水揚水ポンプ1　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_4_1_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水揚水ポンプ1　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_4_1_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水揚水ポンプ2　電流（A)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_4_2_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水揚水ポンプ2　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_4_2_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水揚水ポンプ2　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_4_2_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水揚水ポンプ3　電流（A)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_4_3_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水揚水ポンプ3　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_4_3_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水揚水ポンプ3　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_4_3_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>空気槽　槽圧（kg/cm2)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_5_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>空気槽　吸入圧（Mpa)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_5_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>空気槽　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_5_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟ブロア1　電流（A)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_6_1_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟ブロア1　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_6_1_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟ブロア1　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_6_1_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟ブロア2　電流（A)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_6_2_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟ブロア2　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_6_2_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟ブロア2　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_6_2_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟ブロア3　電流（A)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_6_3_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟ブロア3　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_6_3_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟ブロア3　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_6_3_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟ブロア4　電流（A)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_6_4_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟ブロア4　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_6_4_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟ブロア4　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_6_4_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟ブロア5　電流（A)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_6_5_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟ブロア5　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_6_5_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟ブロア5　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_6_5_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟圧縮機1　電流（A)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_6_6_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟圧縮機1　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_6_6_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟圧縮機1　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_6_6_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟圧縮機2　電流（A)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_6_7_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟圧縮機2　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_6_7_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟圧縮機2　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_6_7_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>中央棟ヘッダー圧（Mpa）</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_6_8|default_if_none:"" }}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>アユ棟ブロアー１　電流（A）</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_7_1_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>アユ棟ブロアー１　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_7_1_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>アユ棟ブロアー１　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_7_1_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>アユ棟ブロアー2　電流（A）</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_7_2_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>アユ棟ブロアー2　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_7_2_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>アユ棟ブロアー2　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_7_2_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>アユ棟ブロアー3　電流（A）</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_7_3_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>アユ棟ブロアー3　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_7_3_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>アユ棟ブロアー3　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_7_3_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>アユ棟ブロア-4　電流（A）</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_7_4_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>アユ棟ブロアー4　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_7_4_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>アユ棟ブロアー4　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_7_4_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>アユ棟ブロアー5　電流（A）</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_7_5_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>アユ棟ブロアー5　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_7_5_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>アユ棟ブロアー5　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_7_5_3_display|default_if_none:"" }}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水取水ポンプ1　電流（A)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_8_1_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水取水ポンプ1　周波数（Hz)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_8_1_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水取水ポンプ1　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_8_1_3|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水取水ポンプ1　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_8_1_4_display|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水取水ポンプ1　ワット（kw)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_8_1_5|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水取水ポンプ1　cosθ</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_8_1_6|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水取水ポンプ2　電流（A)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_8_2_1|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水取水ポンプ2　周波数（Hz)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_8_2_2|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水取水ポンプ2　稼働時間（hr)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_8_2_3|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水取水ポンプ2　異常の有無</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.get_sample_8_2_4_display|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水取水ポンプ2　ワット（kw)</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_8_2_5|default_if_none:"" }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>海水取水ポンプ2　cosθ</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_8_2_6|default_if_none:"" }}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5 col-sm-3">
+        <p>備考</p>
+    </div>
+    <div class="col-7 col-sm-9">
+        <p>{{  item.sample_2|default_if_none:"" }}</p>
+    </div>
+</div>
+
+
 <div class="row">
     <div class="col-5 col-sm-3">
         <p>作成者</p>
